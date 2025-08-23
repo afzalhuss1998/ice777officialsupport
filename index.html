@@ -1,175 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ICE777 | Join the Action!</title>
-  <link rel="icon" href="ICE777-logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICE777 - India's Trusted Gaming Platform</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: #0a0f1a;
-      color: #fff;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        radial-gradient(circle at 20% 30%, rgba(15, 30, 60, 0.8) 0%, transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(60, 15, 30, 0.8) 0%, transparent 30%),
-        linear-gradient(to bottom, #0a0f1a 0%, #1a1a2e 100%);
-      z-index: -2;
-    }
-    
-    body::after {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)" /></svg>'),
-        url('data:image/svg+xml;utf8,<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L180,20 L180,180 L20,180 Z" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1" /></svg>');
-      background-size: 10px 10px, 50px 50px;
-      z-index: -1;
-      opacity: 0.6;
-    }
-    .logo-link {
-      display: block;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: white;
       text-align: center;
-      margin: 20px auto 0;
-      transition: transform 0.3s ease;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
     }
-    
-    .logo {
-      max-width: 350px;
-      width: 80%;
-      height: auto;
-      filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7));
-      position: relative;
-      z-index: 1;
-      animation: float 6s ease-in-out infinite;
+
+    header {
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.8);
     }
-    
-    .logo-link:hover {
-      transform: scale(1.02);
-    }
-    .headline {
-      margin-top: 30px;
-      text-align: center;
-      position: relative;
-      padding: 0 20px;
-    }
-    .headline-text {
+
+    header h1 {
       font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
-      background: linear-gradient(45deg, #ffffff, #ffcc00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      position: relative;
-      display: inline-block;
-      margin: 0 auto;
-      line-height: 1.2;
+      color: #ffcc00;
+      text-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
     }
-    .headline-underline {
-      height: 4px;
-      width: 100px;
-      background: linear-gradient(90deg, #ff6b00, #ffcc00);
-      margin: 15px auto 0;
-      border-radius: 2px;
-      animation: gradient 3s ease infinite;
-      background-size: 200% 100%;
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #ddd;
     }
-    @media (max-width: 768px) {
-      .headline-text {
-        font-size: 2rem;
-      }
-    }
-    .subheadline {
-      margin-top: 15px;
-      font-size: 1.1rem;
-      color: #fff;
-      text-align: center;
-      max-width: 700px;
-      padding: 25px 30px;
-      background: rgba(10, 20, 40, 0.6);
-      border-radius: 15px;
-      margin: 20px auto;
-      line-height: 1.8;
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .subheadline::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #ff6b00, #ffcc00, #ff6b00);
-      background-size: 200% 100%;
-      animation: gradient 3s linear infinite;
-    }
-    
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .subheadline > div {
-      margin: 8px 0;
-      padding: 5px 0;
-    }
-    .language-text {
-      font-size: 1rem;
-      color: #bbb;
-      font-weight: 400;
-    }
-    .cta-text {
-      margin-top: 20px !important;
-      font-size: 1.3rem !important;
-      color: #fff !important;
-      font-weight: 600 !important;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { opacity: 0.9; }
-      50% { opacity: 0.7; }
-      100% { opacity: 0.9; }
-    }
-    .cta-container {
-      margin: 40px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-    .whatsapp-btn {
+
+    /* Signup Button */
+    .signup-btn {
+      margin-top: 40px;
       background: linear-gradient(45deg, #ff6b00, #ff9500);
       color: #fff;
       font-size: 1.5rem;
@@ -186,152 +52,76 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-      border: 2px solid rgba(255,255,255,0.1);
-    }
-    .whatsapp-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 25px rgba(255, 107, 0, 0.6);
-      background: linear-gradient(45deg, #ff7b10, #ffa020);
-    }
-    .whatsapp-btn:active {
-      transform: translateY(1px);
     }
 
-    /* Mobile Fix for SIGNUP button */
+    .signup-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 107, 0, 0.6);
+    }
+
+    /* Mobile Responsive */
     @media (max-width: 600px) {
-      .whatsapp-btn {
-        font-size: 1.1rem;
+      .signup-btn {
+        font-size: 1.2rem;
         padding: 14px 28px;
-        width: 80%;   /* take most of screen width */
-        text-align: center;
+        width: 80%;
       }
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+    section {
+      padding: 80px 20px;
     }
-    .particles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-    .particle {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    footer {
-      margin-top: auto;
+
+    section h2 {
+      font-size: 2rem;
       margin-bottom: 20px;
-      color: #666;
+      color: #ffcc00;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #ccc;
+    }
+
+    footer {
+      padding: 20px;
+      background: #000;
+      margin-top: 50px;
       font-size: 0.9rem;
-      text-align: center;
-      padding: 0 20px;
+      color: #aaa;
     }
-
-    /* Floating WhatsApp Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: #fff;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-      transition: transform 0.3s ease;
-      text-decoration: none;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-      background-color: #1ebe5a;
-    }
-
   </style>
 </head>
 <body>
-<div class="particles" id="particles"></div>
-  
-  <a href="https://ice777.com/clk?src=1bG1q0wkN" target="_blank" rel="noopener noreferrer" class="logo-link">
-    <img src="ice777-logo.png" alt="ICE777" class="logo">
-  </a>
-  <div class="headline">
-    <div class="headline-text">Welcome to ICE777</div>
-    <div class="headline-underline"></div>
-  </div>
-  <div class="subheadline">
-    <div>24/7 Deposit and Withdrawal Service Available</div>
-    <div class="language-text">24/7 जमा और निकासी सेवा उपलब्ध</div>
-    <div class="language-text">24/7 டெபாசிட் & விடுதலை சேவை கிடைக்கிறது</div>
-    <div class="language-text">24/7 డిపాజిట్ & విడుదల సేవ అందుబాటులో ఉంది</div>
-    <div class="language-text">24/7 ಠೇವಣಿ & ವಾಪಸಾತಿ ಸೇವೆ ಲಭ್ಯವಿದೆ</div>
-    <div class="cta-text">Your Premier Gaming Destination - Register Now and Start Playing!</div>
-  </div>
-  
-  <div class="cta-container">
-    <a href="https://ice777.com/clk?src=1bG1q0wkN" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-      SIGNUP NOW
-    </a>
-  </div>
-  
+
+  <!-- HEADER -->
+  <header>
+    <h1>Welcome to ICE777</h1>
+    <p>India's Most Trusted Gaming Platform</p>
+    <a href="#signup" class="signup-btn">SIGNUP NOW</a>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>Why Choose ICE777?</h2>
+    <p>⚡ Super fast deposit & withdrawal<br>
+       🎲 Play Casino, Cricket & Live Games<br>
+       🎁 Exclusive Welcome Bonus for New Users</p>
+  </section>
+
+  <!-- SIGNUP -->
+  <section id="signup">
+    <h2>Join ICE777 Today</h2>
+    <p>Register now and unlock unlimited gaming opportunities with exciting bonuses.</p>
+    <a href="https://ice777.com/signup" class="signup-btn">SIGNUP NOW</a>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 ICE777. All rights reserved.
+    <p>© 2025 ICE777. All Rights Reserved.</p>
   </footer>
 
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/919876543210" 
-     class="whatsapp-float" 
-     target="_blank" 
-     rel="noopener noreferrer">
-     💬
-  </a>
-
-  <script>
-    // Create floating particles
-    document.addEventListener('DOMContentLoaded', function() {
-      const particlesContainer = document.getElementById('particles');
-      const particleCount = 20;
-      
-      for (let i = 0; i < particleCount; i++) {
-        createParticle();
-      }
-      
-      function createParticle() {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        
-        // Random size between 2px and 6px
-        const size = Math.random() * 4 + 2;
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-        
-        // Random position
-        particle.style.left = `${Math.random() * 100}%`;
-        particle.style.top = `${Math.random() * 100}%`;
-        
-        // Random animation
-        const duration = Math.random() * 20 + 10; // 10-30 seconds
-        const delay = Math.random() * -20; // Start at random point
-        particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
-        
-        // Random opacity
-        particle.style.opacity = Math.random() * 0.5 + 0.1;
-        
-        particlesContainer.appendChild(particle);
-      }
-    });
-  </script>
 </body>
 </html>
